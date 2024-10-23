@@ -1,0 +1,75 @@
+.mainContainer {
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.mainBody{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.mainAppDisplay {
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    /*left: 5%;*/
+    /*top: 10%;*/
+    border-radius: 20px;
+    border-width: 5px; /* top, right, bottom, left */
+    border-style: solid;
+    /*border-color: #2b542c;*/
+    /*background: url("https://img.freepik.com/free-photo/modern-tokyo-street-background_23-2149394883.jpg?t=st=1713963727~exp=1713967327~hmac=d5821266810f2eeafa3e65c1f252f78edd12f8c8c7b7bb6d53279f9243ad1867&w=740");*/
+    position: absolute;
+}
+
+@media (max-width: 600px) {
+    .mainAppDisplay {
+        height: 80%;
+        width: 90%;
+        left: 5%;
+        top: 10%;
+    }
+
+}
+
+
+.settingsDisplay {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    color: greenyellow;
+    display: flex;
+    align-items: center;
+}
+
+i.icon.settingsIcon{
+    transform: scale(1.5);
+    transform-origin: center;
+    cursor: pointer;
+}
+
+
+i.icon.settingsIcon:hover{
+    transform: scale(2);
+    transform-origin: center;
+}
+
+/*!* Overlay to hide the background *!*/
+/*.overlay {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: rgba(0, 0, 0, 0.5); !* Semi-transparent black *!*/
+/*    z-index: 1001;*/
+/*}*/
+/*.ui.modal {*/
+/*    z-index: 1002 !important; !* Ensure modal is on top *!*/
+/*}*/

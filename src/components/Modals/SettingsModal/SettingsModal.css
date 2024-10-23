@@ -1,0 +1,46 @@
+.ui.page.modals.dimmer.transition.visible.active{
+    background: black;
+}
+
+.ui.input.avatarInput{
+    /*color:red;*/
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ui.label{
+    padding-bottom: 10px;
+}
+.ui.button.sessionButton{
+    left: 125%;
+    position: absolute;
+    top: 21%;
+    background: transparent;
+}
+
+.ui.page.modals.modal{
+    width: 600px;
+}
+
+i.icon.reloadIcon{
+    transform: scale(1.5);
+    transform-origin: center;
+    cursor: pointer;
+}
+
+.ui.active.modal{
+    width: 600px;
+}
+
+@media (max-width: 600px) {
+    .ui.active.modal{
+        width: 450px;
+        left: 6%;
+    }
+}
+i.icon.reloadIcon:hover{
+    transform: scale(2);
+    transform-origin: center;
+}
+

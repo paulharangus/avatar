@@ -1,0 +1,76 @@
+.actionRowsWrap {
+    opacity: 75%;
+    bottom: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    gap: 12px;
+    width: 100%;
+}
+.actionRow {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    left: 5%;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.actionRow label {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button {
+    display: inline-block;
+    padding: 0 16px;
+    border-radius: 8px;
+    height: 40px;
+
+    /*background-color: #4caf50; !* Green *!*/
+    border: none;
+
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.taskInput {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.i.icon{
+    position: absolute;
+}
+
+@media (max-width: 600px) {
+    .actionRowsWrap {
+        height: 100px;
+        bottom: 10px;
+        overflow-x: scroll;
+    }
+
+    .actionRowsWrap::-webkit-scrollbar {
+        display: none;
+    }
+}
+.buttonDiv{
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+ }
