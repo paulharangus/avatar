@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22d0d2d3-dfbd-470d-be79-3bbb0bd5348f" name="Changes" comment="first">
-      <change afterPath="$PROJECT_DIR$/src/components/videoSection/logo_confindustria-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.bd1de000.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.bd1de000.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.d1c063fd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.d1c063fd.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.d1c063fd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/animation/AnimationSVG.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animation/AnimationSVG.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +40,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/avatar/avatar",
+    "last_opened_file_path": "D:/avatar/avatar/build",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,6 +51,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\avatar\avatar\build" />
+      <recent name="D:\avatar\avatar\node_modules" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\avatar\avatar\src\components\videoSection" />
     </key>
@@ -79,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729696866758</updated>
       <workItem from="1729696867890" duration="1522000" />
-      <workItem from="1729754936341" duration="204000" />
+      <workItem from="1729754936341" duration="992000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -97,7 +94,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729698010475</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="first">
+      <option name="closed" value="true" />
+      <created>1729755284679</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729755284679</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
