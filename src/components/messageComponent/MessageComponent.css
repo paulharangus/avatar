@@ -47,11 +47,13 @@ button:hover {
 }
 
 .taskInput {
-    width: 100% !important;
-    height: 40px !important;
-    padding: 0 12px !important;
+    position: relative!important;
     border-radius: 20px !important;
     font-size: 16px !important;
+    height: 40px !important;
+    padding: 0 12px !important;
+    width: 100% !important;
+    top: 11px!important;
 }
 
 .i.icon{

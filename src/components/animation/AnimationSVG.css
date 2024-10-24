@@ -6,4 +6,8 @@
 .show {
     display: block;
 }
+.svg-animation-container{
+    position: relative;
+    left: 105px;
+}
 
