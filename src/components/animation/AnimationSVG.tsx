@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './AnimationSVG.css';
-import imgData from "../videoSection/logo.png"
+import imgData from "../videoSection/logo_confindustria-1.png"
 
 
 const SvgAnimation = () => {

@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22d0d2d3-dfbd-470d-be79-3bbb0bd5348f" name="Changes" comment="first" />
+    <list default="true" id="22d0d2d3-dfbd-470d-be79-3bbb0bd5348f" name="Changes" comment="first">
+      <change afterPath="$PROJECT_DIR$/src/components/videoSection/logo_confindustria-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.bd1de000.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.bd1de000.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.d1c063fd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.d1c063fd.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.d1c063fd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/animation/AnimationSVG.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animation/AnimationSVG.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,9 +29,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
 }]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2nqNuDwHreyZATq8SsLvoQXhmuU" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,7 +47,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/avatar",
+    "last_opened_file_path": "D:/avatar/avatar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -43,6 +57,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\avatar\avatar\src\components\videoSection" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -60,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729696866758</updated>
       <workItem from="1729696867890" duration="1522000" />
+      <workItem from="1729754936341" duration="204000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -82,6 +102,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
