@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.956dc1f3.css",
-    "main.js": "/static/js/main.e308485d.js",
+    "main.js": "/static/js/main.fb3e3013.js",
     "static/js/453.c5627dd2.chunk.js": "/static/js/453.c5627dd2.chunk.js",
-    "static/media/logo_confindustria-1.png": "/static/media/logo_confindustria-1.573e110a856e9da9ccc5.png",
     "index.html": "/index.html",
     "main.956dc1f3.css.map": "/static/css/main.956dc1f3.css.map",
-    "main.e308485d.js.map": "/static/js/main.e308485d.js.map",
+    "main.fb3e3013.js.map": "/static/js/main.fb3e3013.js.map",
     "453.c5627dd2.chunk.js.map": "/static/js/453.c5627dd2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.956dc1f3.css",
-    "static/js/main.e308485d.js"
+    "static/js/main.fb3e3013.js"
   ]
 }
