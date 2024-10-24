@@ -15,7 +15,7 @@ const SvgAnimation = () => {
 
     return (
         <div className="svg-animation-container">
-            <img src={"https://34.154.18.23/wp-content/uploads/2024/10/logo_confindustria-1.png"} datatype={"http://34.154.18.23/wp-content/uploads/static/media/logo_confindustria-1.png"}/>
+            <img style={{    position: "relative",left: "90px"}} src={"https://34.154.18.23/wp-content/uploads/2024/10/logo_confindustria-1.png"} datatype={"http://34.154.18.23/wp-content/uploads/static/media/logo_confindustria-1.png"}/>
             {/*{svgPath ? (*/}
             {/*        <object*/}
             {/*            id="elem"*/}
