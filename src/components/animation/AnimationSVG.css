@@ -22,11 +22,20 @@
     }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 380px) {
     .svgAnimation {
         height: 250px;
         left: -35%;
         position: relative;
         width: 250px;
+    }
+}
+
+@media (max-width: 350px) {
+    .svgAnimation {
+        height: 227px;
+        left: -38%;
+        position: relative;
+        width: 235px;
     }
 }
