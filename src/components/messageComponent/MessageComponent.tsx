@@ -148,6 +148,23 @@ const MessageComponent = (messageInterface: any) => {
         }
     }, [load]);
 
+    function calculateReadingTime(text:string, wordsPerMinute = 180) {
+        // Count the number of words in the text
+        const wordCount = text.split(/\s+/).length;
+
+        // Calculate reading time in minutes
+        const readingTimeMinutes = wordCount / wordsPerMinute;
+
+        // Convert to seconds (optional for more detail)
+        const readingTimeSeconds = Math.round(readingTimeMinutes * 60);
+
+        // Return both formats
+        return {
+            minutes: readingTimeMinutes.toFixed(2),
+            seconds: readingTimeSeconds
+        };
+    }
+
     useEffect(() => {
         if (session) {
             // // @ts-ignore
@@ -189,10 +206,11 @@ const MessageComponent = (messageInterface: any) => {
                             setListening(false)
                             return;
                         }
-                        const time = value.length * 100
+                        const time = calculateReadingTime(value).seconds + 25
+                        console.log(time)
                         setTimeout(function () {
                             setListening(true)
-                        }, time);
+                        }, time * 1000);
                         setListening(false)
                     })
                 }
