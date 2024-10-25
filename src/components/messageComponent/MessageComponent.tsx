@@ -251,18 +251,21 @@ const MessageComponent = (messageInterface: any) => {
         return !dissable ? baseColor : nullColor
     }
 
+
+    const [currentMessege, setCurrentMessege] = useState("")
     return (
         <div className="actionRowsWrap">
             <div className="actionRow">
                 <label style={{width: "fit-content", minWidth: "70%"}}>
                     {/*Message*/}
-                    <input id="taskInput" className={"taskInput"} type="text" onClick={() => {
+                    <input id="taskInput" className={"taskInput"} type="text" value={currentMessege} onClick={() => {
                         console.log(messageInterface.messageInterface)
                         if (!messageInterface.messageInterface.connection) {
                             messageInterface.messageInterface.doInit()
                         }
                     }} onChange={(value) => {
                         messageInterface.messageInterface.setMessage(value.target.value)
+                        setCurrentMessege(value.target.value)
                     }}/>
                 </label>
                 <div className={"buttonDiv"}>
@@ -283,6 +286,7 @@ const MessageComponent = (messageInterface: any) => {
                                 setDissable(true)
                             talkHandler(messageInterface.messageInterface.sesionInternface, {taskInput: messageInterface.messageInterface.message}).then(() => {
                                 setDissable(false)
+                                setCurrentMessege("")
                             })
                         }
                     }}>

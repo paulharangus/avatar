@@ -30,8 +30,8 @@ const openai = new OpenAI({
     apiKey: ""//process.env.OPENAI_API_KEY,
 });
 
-let systemSetup = "";
-let dataBuffer = fs.readFileSync(path.join(__dirname, 'CECBank.pdf'));
+let systemSetup = "Use this documentation to respond and this only:";
+let dataBuffer = fs.readFileSync(path.join(__dirname, 'confindustria_1.pdf'));
 
 pdf(dataBuffer).then(function (data) {
     systemSetup = data.text;
@@ -147,7 +147,7 @@ app.post('/openai/complete', async (req, res) => {
         systemSetup="Keep in mind not to mention the name OpenAI"
         const chatCompletion = await openai.chat.completions.create({
             messages: [
-                { role: 'system', content: ""},
+                { role: 'system', content: systemSetup},
                 { role: 'user', content: prompt }
             ],
             model: 'gpt-4o',

@@ -10,7 +10,7 @@ const heygen_API = {
 
 const apiKey = heygen_API.apiKey;
 const SERVER_URL = heygen_API.serverUrl;
-const localServer:string = "https://server1-dot-tr-avatar-newui-ro.ew.r.appspot.com"
+const localServer:string = "https://server2-dot-tr-avatar-newui-ro.ew.r.appspot.com"
 // const localServer: string = "http://localhost:3001"
 
 

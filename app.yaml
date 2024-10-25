@@ -1,5 +1,5 @@
 runtime: nodejs18
-service: server1
+service: server2
 
 instance_class: F1
 
