@@ -10,4 +10,11 @@
     position: relative;
     left: 105px;
 }
-
+@media (max-width: 600px) {
+    .svgAnimation {
+        height: 250px;
+        left: -35%;
+        position: relative;
+        width: 250px;
+    }
+}
