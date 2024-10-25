@@ -10,6 +10,16 @@
     position: relative;
     left: 105px;
 }
+
+@media (min-width: 880px) and (max-width: 980px){
+    .svgAnimation {
+        height: 250px;
+        left: -25%;
+        position: relative;
+        width: 250px;
+    }
+}
+
 @media (max-width: 600px) {
     .svgAnimation {
         height: 250px;
@@ -18,3 +28,5 @@
         width: 250px;
     }
 }
+
+
