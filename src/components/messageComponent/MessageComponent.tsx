@@ -12,6 +12,7 @@ import {Icon, Input} from "semantic-ui-react";
 import {Subject} from "rxjs";
 import {StyleInterface} from "../Modals/SettingsModal/SettingsModal";
 import {ButtonDissableSubject} from "../mainPage/mainComponent";
+import {LiveAudioVisualizer} from "react-audio-visualize";
 
 
 export const hideChat = new Subject<boolean>();
@@ -273,6 +274,10 @@ const MessageComponent = (messageInterface: any) => {
     const [currentMessege, setCurrentMessege] = useState("")
     return (
         <div className="actionRowsWrap">
+            {/*{ media instanceof MediaRecorder && (*/}
+            {/*    <LiveAudioVisualizer barColor={"red"} mediaRecorder={media} width={500} height={115} />*/}
+            {/*)}*/}
+
             <div className="actionRow">
                 <label style={{width: "fit-content", minWidth: "70%"}}>
                     {/*Message*/}

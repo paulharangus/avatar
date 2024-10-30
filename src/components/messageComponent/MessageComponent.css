@@ -53,7 +53,7 @@ button:hover {
     height: 40px !important;
     padding: 0 12px !important;
     width: 100% !important;
-    top: 11px!important;
+    /*top: 11px!important;*/
 }
 
 .i.icon{
