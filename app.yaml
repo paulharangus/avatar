@@ -19,7 +19,7 @@
 
 
 runtime: nodejs18
-service: app2
+service: app3
 
 instance_class: F1
 

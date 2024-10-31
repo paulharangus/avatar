@@ -1,5 +1,5 @@
 import {
-    analyzeMedia,
+    analyzeMedia, messageTextSubject,
     messageVoiceSubject,
     SessionInterface,
     startListen,
@@ -177,8 +177,10 @@ const MessageComponent = (messageInterface: any) => {
             //         analyzeMedia(formData, session)
             //     }
             // }
-            // @ts-ignore
-            media.ondataavailable = (event: any) => {
+
+            try{
+                // @ts-ignore
+                media.ondataavailable = (event: any) => {
                 audioChunks.push(event.data);
                 const audioBlob = new Blob([...audioChunks, event.data], {type: 'audio/wav'});
 
@@ -216,6 +218,9 @@ const MessageComponent = (messageInterface: any) => {
                     })
                 }
             }
+        }catch {
+                messageTextSubject.next("Tell the user this message:`You need to enable the microphone in your browser bcs it is disabled!`")
+            }
         }
     }, [session]);
     useEffect(() => {
@@ -224,7 +229,22 @@ const MessageComponent = (messageInterface: any) => {
         }
 
         if (listening) {
-            media?.start(2000);
+            try{
+                if(media === undefined)
+                {
+                    setDissable(true)
+                    talkHandler(messageInterface.messageInterface.sesionInternface, {taskInput: ("Tell the user this message:`You need to enable the microphone in your browser bcs it is disabled!`")}).then(() => {
+                        setDissable(false)
+                        setListening(false)
+                        setCurrentMessege("")
+                    })
+                    return;
+                }
+                media?.start(2000);
+            }catch {
+
+            }
+
         } else {
             media?.stop()
         }

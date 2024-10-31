@@ -44,4 +44,12 @@
         top: -40px;
     }
 }
-
+@media screen and (max-width: 920px) and (max-height: 420px){
+    .videoWrap .videoEle {
+        width: 180%;
+        max-height: 580px;
+        max-width: 429px;
+        position: absolute;
+        top: -40px;
+    }
+}
