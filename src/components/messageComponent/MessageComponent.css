@@ -78,10 +78,20 @@ button:hover {
  }
 
 
-@media screen and (max-width: 920px) and (max-height: 420px){
+@media screen and (max-width: 920px) and (max-height: 420px) {
     .actionRow label {
-        width: 52% !important;
-        min-width: 56% !important;
-     }
+        top: 10px;
+        min-width: 45% !important;
+        width: 43% !important;
+        position: relative;
+    }
 }
 
+
+@media screen and (max-width: 920px) and (max-height: 420px) {
+    .actionRow {
+        gap: 9px ! Important;
+        left: 5%;
+        width: 94% ! Important;
+    }
+}

@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="22d0d2d3-dfbd-470d-be79-3bbb0bd5348f" name="Changes" comment="first">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.223c3fd9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.223c3fd9.css.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/animation/AnimationSVG.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animation/AnimationSVG.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/videoSection/VideoComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/videoSection/VideoComponent.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +98,7 @@
       <workItem from="1730102692931" duration="7876000" />
       <workItem from="1730192165276" duration="7112000" />
       <workItem from="1730269747511" duration="3128000" />
-      <workItem from="1730361341000" duration="1799000" />
+      <workItem from="1730361341000" duration="2329000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -209,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730362819602</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="first">
+      <option name="closed" value="true" />
+      <created>1730363288614</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730363288614</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
