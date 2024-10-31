@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22d0d2d3-dfbd-470d-be79-3bbb0bd5348f" name="Changes" comment="first">
-      <change afterPath="$PROJECT_DIR$/tr-contact-center-ai-0f50e4ab61ba (1).json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.c801f639.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/css/main.c801f639.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.c801f639.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/css/main.c801f639.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e922ea92.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e922ea92.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e922ea92.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/animation/AnimationSVG.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animation/AnimationSVG.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/videoSection/VideoComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/videoSection/VideoComponent.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +95,7 @@
       <workItem from="1730102692931" duration="7876000" />
       <workItem from="1730192165276" duration="7112000" />
       <workItem from="1730269747511" duration="3128000" />
-      <workItem from="1730361341000" duration="1085000" />
+      <workItem from="1730361341000" duration="1799000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -206,7 +193,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730278872741</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="first">
+      <option name="closed" value="true" />
+      <created>1730362654198</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1730362654198</updated>
+    </task>
+    <task id="LOCAL-00014" summary="first">
+      <option name="closed" value="true" />
+      <created>1730362819602</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730362819602</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

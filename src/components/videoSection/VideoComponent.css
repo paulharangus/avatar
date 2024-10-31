@@ -48,7 +48,7 @@
     .videoWrap .videoEle {
         width: 180%;
         max-height: 580px;
-        max-width: 429px;
+        max-width: 380px;
         position: absolute;
         top: -40px;
     }

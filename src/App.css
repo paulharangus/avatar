@@ -28,8 +28,8 @@
 
 @media screen and (max-width: 920px) and (max-height: 420px){
     .mainAppDisplay{
-        height: 410px;
-        width: 915px;
+        height: 350px;
+        width: 680px;
     }
 }
 
