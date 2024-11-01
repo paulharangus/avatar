@@ -28,6 +28,7 @@ export interface MessageInterface {
     updateStatus: any,
     sesionInternface: any,
     message: any,
+    reOpen:any,
     style: StyleInterface
 }
 
@@ -165,6 +166,10 @@ const MessageComponent = (messageInterface: any) => {
             seconds: readingTimeSeconds
         };
     }
+
+    useEffect(() => {
+        console.log(messageInterface.messageInterface.sesionInternface)
+    }, [messageInterface.messageInterface.sesionInternface]);
 
     useEffect(() => {
         if (session) {
@@ -305,6 +310,10 @@ const MessageComponent = (messageInterface: any) => {
                         console.log(messageInterface.messageInterface)
                         if (!messageInterface.messageInterface.connection) {
                             messageInterface.messageInterface.doInit()
+                            return
+                        }
+                        if(messageInterface.messageInterface.connection && messageInterface.messageInterface.sesionInternface === undefined) {
+                            messageInterface.messageInterface.reOpen()
                         }
                     }} onChange={(value) => {
                         messageInterface.messageInterface.setMessage(value.target.value)

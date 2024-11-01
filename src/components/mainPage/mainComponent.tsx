@@ -8,7 +8,7 @@ import {
 } from "../../servers/services/sessionService";
 import "./mainComponent.css"
 import AnimationSVG from "../animation/AnimationSVG";
-import VideoComponent, {VideoComponentInterface} from "../videoSection/VideoComponent";
+import VideoComponent, { hidingLogo, VideoComponentInterface} from "../videoSection/VideoComponent";
 import MessageComponent, {MessageInterface} from "../messageComponent/MessageComponent";
 import ListComponent from "../ListComponet/ListComponent";
 import {Subject} from "rxjs";
@@ -42,7 +42,6 @@ export const MainComponent = ({ avatar, reRender, setReRender,style }:MainCompon
     const [visibleCanvasElement, setVisibleCanvasElement] = useState(false);
     const [hideLogo, setHideLogo] = useState(false)
 
-    const [sessionMessage, setSessionMessage] = useState('Loaded'); // Renamed here
     const [cookieMessage, setCookieMessage] = useState<string|undefined>('');
 
     const saveMessageToCookies = (msg:string) => {
@@ -54,6 +53,8 @@ export const MainComponent = ({ avatar, reRender, setReRender,style }:MainCompon
         const msg = Cookies.get('message');
         setCookieMessage(msg || 'No message found');
     };
+
+    const [re_opened, setRe_opened] = useState(false)
 
     useEffect(() => {
         loadMessageFromCookies();
@@ -67,7 +68,13 @@ export const MainComponent = ({ avatar, reRender, setReRender,style }:MainCompon
                 if(currentMsg === "stopServer"){
                     if (sesionInternface) {
                         closeConnectionHandler(sesionInternface)
-                        window.location.reload();
+                        // window.location.reload();
+                        hidingLogo.next("a")
+                        setTimeout(()=>{
+                            saveMessageToCookies("NotLoaded");
+                            // setConnection(false)
+                            setSesionInterface(undefined)}
+                            ,2000)
                     }
                 }
             }
@@ -111,6 +118,27 @@ export const MainComponent = ({ avatar, reRender, setReRender,style }:MainCompon
             setReRender(false);
         }
     }, [reRender]);
+
+
+    const reopen = () =>{
+        doInit()
+        hidingLogo.next("b")
+        const load = wait(2000);
+        load.then(()=>{
+            showElement(canvasElement)
+            const storage = localStorage.getItem("localSettings");
+            if(storage) {
+                const message = JSON.parse(storage)
+                if (sesionInternface) {
+                    talkHandler(sesionInternface, {taskInput: "Ciao!(italian)"});
+                }
+            } else {
+                if (sesionInternface) {
+                    talkHandler(sesionInternface, {taskInput: "Ciao!(italian)"});
+                }
+            }
+        })
+    }
 
     ///OnInitalization
     const doInit = () => {
@@ -237,12 +265,15 @@ export const MainComponent = ({ avatar, reRender, setReRender,style }:MainCompon
             doInit: doInit,
             message: message,
             sesionInternface: sesionInternface,
+            reOpen: reopen,
             setMessage: setMessage,
             updateStatus: updateStatus
         }
 
         return messageInterface;
     }
+
+
     return (
         <div className="main">
 
