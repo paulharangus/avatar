@@ -4,7 +4,7 @@ import {ButtonDissableSubject} from "../../components/mainPage/mainComponent";
 
 
 const heygen_API = {
-    apiKey: 'M2UyZWE2YWEzNjFlNGEzOGEyOGNmZDA3MjhmMjYzZjYtMTczMDIyMTI3MA==',
+    apiKey: 'ODBlNjNhMWUwYTc1NGRkY2I4NmU0MDMzNTAyMWU5MTgtMTczMDQ2NDA2OQ==',
     serverUrl: 'https://api.heygen.com',
 };
 
