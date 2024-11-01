@@ -363,7 +363,7 @@ const MessageComponent = (messageInterface: any) => {
                             }
 
                         }}>
-                        {!listening?<Icon name="microphone" inverted/>:<Icon name="mute" inverted/>}
+                        {listening?<Icon name="microphone" inverted/>:<Icon name="mute" inverted/>}
                     </button>
                     <button
                         onMouseEnter={() => {

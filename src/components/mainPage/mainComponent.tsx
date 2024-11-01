@@ -15,6 +15,7 @@ import {Subject} from "rxjs";
 import {AvatarInterface, StyleInterface} from "../Modals/SettingsModal/SettingsModal";
 import {avatarSubject, settingsSubject} from "../../App";
 import {wait} from "@testing-library/user-event/dist/utils";
+import Cookies from 'js-cookie';
 
 export interface MainComponentInterface{
     avatar:AvatarInterface,
@@ -41,8 +42,43 @@ export const MainComponent = ({ avatar, reRender, setReRender,style }:MainCompon
     const [visibleCanvasElement, setVisibleCanvasElement] = useState(false);
     const [hideLogo, setHideLogo] = useState(false)
 
+    const [sessionMessage, setSessionMessage] = useState('Loaded'); // Renamed here
+    const [cookieMessage, setCookieMessage] = useState<string|undefined>('');
 
+    const saveMessageToCookies = (msg:string) => {
+        Cookies.set('message', msg, { expires: 7 });
+        setCookieMessage(msg);
+    };
 
+    const loadMessageFromCookies = () => {
+        const msg = Cookies.get('message');
+        setCookieMessage(msg || 'No message found');
+    };
+
+    useEffect(() => {
+        loadMessageFromCookies();
+
+        const intervalId = setInterval(() => {
+            const currentMsg = Cookies.get('message');
+            if (currentMsg !== cookieMessage) {
+                // alert(`Cookie message changed: ${currentMsg}`);
+                console.log(`Cookie message changed: ${currentMsg}`)
+                setCookieMessage(currentMsg);
+                if(currentMsg === "stopServer"){
+                    if (sesionInternface) {
+                        closeConnectionHandler(sesionInternface)
+                        window.location.reload();
+                    }
+                }
+            }
+        }, 1000); // Check every second
+
+        return () => clearInterval(intervalId); // Cleanup on unmount
+    }, [cookieMessage]);
+
+    useEffect(() => {
+        saveMessageToCookies("NotLoaded")
+    }, []);
 
 
     useEffect(() => {
@@ -100,7 +136,8 @@ export const MainComponent = ({ avatar, reRender, setReRender,style }:MainCompon
             voiceID: voiceId
         }).then((value: any) => {
             // setHideLogo(true);
-            setSesionInterface(value)
+            setSesionInterface(value);
+            saveMessageToCookies("Loading");
             startSession(value);
         })
     }
