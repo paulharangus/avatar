@@ -322,6 +322,7 @@ const MessageComponent = (messageInterface: any) => {
                 </label>
                 <div className={"buttonDiv"}>
                     <button
+                        // data-title={"Send"}
 
                         onMouseEnter={() => {
                             onHover(1)
@@ -342,11 +343,12 @@ const MessageComponent = (messageInterface: any) => {
                             })
                         }
                     }}>
-                        <Icon onMouseEnter={() => {
+                        <Icon title={"send"} onMouseEnter={() => {
                             onHover(1)
                         }} name="send" inverted/>
                     </button>
                     <button
+                        title={listening?"mute":"unmute"}
                         onMouseEnter={() => {
                             onHover(2)
                         }}
@@ -375,6 +377,7 @@ const MessageComponent = (messageInterface: any) => {
                         {listening?<Icon name="microphone" inverted/>:<Icon name="mute" inverted/>}
                     </button>
                     <button
+                        title={"downland the chat"}
                         onMouseEnter={() => {
                             onHover(3)
                         }}
@@ -387,6 +390,7 @@ const MessageComponent = (messageInterface: any) => {
                         }}><Icon name="download" inverted/>
                     </button>
                     <button
+                        title={"reveal the chat"}
                         onMouseEnter={() => {
                             onHover(4)
                         }}

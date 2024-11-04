@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22d0d2d3-dfbd-470d-be79-3bbb0bd5348f" name="Changes" comment="first">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.63f63f93.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.63f63f93.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.63f63f93.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servers/services/sessionService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/services/sessionService.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +101,8 @@
       <workItem from="1730192165276" duration="7112000" />
       <workItem from="1730269747511" duration="3128000" />
       <workItem from="1730361341000" duration="3300000" />
-      <workItem from="1730450216780" duration="7425000" />
+      <workItem from="1730450216780" duration="8099000" />
+      <workItem from="1730717663732" duration="1920000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -239,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730462588398</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="first">
+      <option name="closed" value="true" />
+      <created>1730464186674</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1730464186674</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

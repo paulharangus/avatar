@@ -95,3 +95,19 @@ button:hover {
         width: 94% ! Important;
     }
 }
+.buttonDiv[data-title]:hover::after {
+    content: attr(data-title);
+    /*position: absolute;*/
+    /*top: 65px; !* Position above the button *!*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+    /*background-color: rgba(0, 0, 0, 0.75); !* Tooltip background *!*/
+    /*color: #fff; !* Text color *!*/
+    /*padding: 5px 10px;*/
+    /*border-radius: 20px;*/
+    /*white-space: nowrap;*/
+    /*font-size: 12px;*/
+    /*z-index: 10001;*/
+    /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);*/
+    /*pointer-events: none;*/
+}
