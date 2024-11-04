@@ -117,6 +117,7 @@ const ListComponent = () => {
                                     <div style={{right: "-36%", position: "relative"}}>
                                         <ListItem className={"listItem"}>{questions[idx]}</ListItem>
                                     </div>
+                                    <br/>
                                     <ListItem className={"listItem"} key={idx}>{d}</ListItem>
 
                                 </div>

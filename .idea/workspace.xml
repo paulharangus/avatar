@@ -8,12 +8,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.63f63f93.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.63f63f93.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.63f63f93.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.644780fa.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.644780fa.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.238116c1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.238116c1.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.238116c1.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListComponet/ListComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListComponet/ListComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListComponet/ListComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListComponet/ListComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servers/services/sessionService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/services/sessionService.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +104,7 @@
       <workItem from="1730269747511" duration="3128000" />
       <workItem from="1730361341000" duration="3300000" />
       <workItem from="1730450216780" duration="8099000" />
-      <workItem from="1730717663732" duration="1920000" />
+      <workItem from="1730717663732" duration="3701000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -256,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730464186674</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="first">
+      <option name="closed" value="true" />
+      <created>1730720237194</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1730720237194</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
