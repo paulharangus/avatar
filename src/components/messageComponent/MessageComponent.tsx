@@ -376,6 +376,20 @@ const MessageComponent = (messageInterface: any) => {
                         onMouseLeave={offHover}
                         disabled={dissable}
                         id="whisperBtn"
+                        onTouchStart={() => {
+                            if (!dissable) {
+                                if (!messageInterface.messageInterface.connection) {
+                                    messageInterface.messageInterface.doInit();
+                                }
+                                if (messageInterface.messageInterface.sesionInternface) {
+                                    setSession(messageInterface.messageInterface.sesionInternface);
+                                    setListening(true); // Set listening to true on mouse down
+                                }
+                            }
+                        }}
+                        onTouchEnd={() => {
+                            setListening(false); // Set listening to false on mouse up
+                        }}
                         style={{backgroundColor: `${returnCollorSettingsB2()}`}}
                         onMouseDown={() => {
                             if (!dissable) {

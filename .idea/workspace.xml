@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22d0d2d3-dfbd-470d-be79-3bbb0bd5348f" name="Changes" comment="first">
-      <change afterPath="$PROJECT_DIR$/avatar.pdf" afterDir="false" />
+    <list default="true" id="22d0d2d3-dfbd-470d-be79-3bbb0bd5348f" name="Changes" comment="new">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.7491f795.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.7491f795.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.7491f795.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.27a71a9b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.27a71a9b.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.27a71a9b.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/messageComponent/MessageComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servers/services/sessionService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/servers/services/sessionService.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,7 @@
       <workItem from="1731052194287" duration="1125000" />
       <workItem from="1731575870386" duration="857000" />
       <workItem from="1731939656626" duration="533000" />
-      <workItem from="1732019860599" duration="9522000" />
+      <workItem from="1732019860599" duration="10713000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -296,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730722643100</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="new">
+      <option name="closed" value="true" />
+      <created>1732032606591</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732032606591</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +320,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="new" />
+    <option name="LAST_COMMIT_MESSAGE" value="new" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
