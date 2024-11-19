@@ -1,9 +1,9 @@
 import {
-    analyzeMedia, messageTextSubject,
+    analyzeMedia, interupTask, messageTextSubject,
     messageVoiceSubject,
     SessionInterface,
     startListen,
-    talkHandler
+    talkHandler, taskManager
 } from "../../servers/services/sessionService";
 import React, {useEffect, useState} from "react";
 import "./MessageComponent.css"
@@ -54,6 +54,7 @@ const MessageComponent = (messageInterface: any) => {
     const [load, setLoad] = useState<boolean>(false);
     const [session, setSession] = useState<SessionInterface>()
     const [dissable, setDissable] = useState(false)
+    const [inATask, setInATask] = useState(false)
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -123,6 +124,19 @@ const MessageComponent = (messageInterface: any) => {
             ButtonDissableSubject.subscribe({
                 next: (value) => {
                     setDissable(value)
+                }
+            })
+
+            taskManager.subscribe({
+                next: (value) => {
+                    setInATask(value!=="stooop")
+
+                    const normalValue = (calculateReadingTime(value,180).seconds + value.length/20 ) * 1000
+
+                    const time = value.length < 40 ? calculateReadingTime(value,110).seconds * 250 : normalValue
+                    setTimeout(()=>{
+                        setInATask(false)
+                    },time)
                 }
             })
 
@@ -216,9 +230,9 @@ const MessageComponent = (messageInterface: any) => {
                         }
                         const time = calculateReadingTime(value).seconds + 25
                         console.log(time)
-                        setTimeout(function () {
-                            setListening(true)
-                        }, time * 1000);
+                        // setTimeout(function () {
+                        //     setListening(true)
+                        // }, time * 1000);
                         setListening(false)
                     })
                 }
@@ -335,6 +349,11 @@ const MessageComponent = (messageInterface: any) => {
                         disabled={!messageInterface.messageInterface.connection || dissable} onClick={() => {
                         messageInterface.messageInterface.updateStatus(messageInterface.messageInterface.message, 0);
                         if (messageInterface.messageInterface.sesionInternface) {
+                            if(inATask){
+                                setInATask(false)
+                                interupTask(messageInterface.messageInterface.sesionInternface.sessionInfo.session_id)
+                                return;
+                            }
                             if (!dissable)
                                 setDissable(true)
                             talkHandler(messageInterface.messageInterface.sesionInternface, {taskInput: messageInterface.messageInterface.message}).then(() => {
@@ -343,58 +362,57 @@ const MessageComponent = (messageInterface: any) => {
                             })
                         }
                     }}>
-                        <Icon title={"send"} onMouseEnter={() => {
+                        {!inATask ? <Icon title={"send"} onMouseEnter={() => {
                             onHover(1)
-                        }} name="send" inverted/>
+                        }} name="send" inverted/> : <Icon title={"send"} onMouseEnter={() => {
+                            onHover(1)
+                        }} name="stop circle" inverted/>}
                     </button>
                     <button
-                        title={listening?"mute":"unmute"}
+                        title={listening ? "mute" : "unmute"}
                         onMouseEnter={() => {
-                            onHover(2)
+                            onHover(2);
                         }}
                         onMouseLeave={offHover}
                         disabled={dissable}
                         id="whisperBtn"
                         style={{backgroundColor: `${returnCollorSettingsB2()}`}}
-                        onClick={() => {
-                            if (dissable)
-                                return
-                            if (!messageInterface.messageInterface.connection) {
-                                messageInterface.messageInterface.doInit()
-                            }
-                            if (messageInterface.messageInterface.sesionInternface) {
-                                setSession(messageInterface.messageInterface.sesionInternface)
-                                if (!listening) {
-                                    // startListen(messageInterface.messageInterface.sesionInternface)
-                                    setListening(true)
-                                } else {
-                                    setListening(false);
-                                    // stopRecording.next(true);
+                        onMouseDown={() => {
+                            if (!dissable) {
+                                if (!messageInterface.messageInterface.connection) {
+                                    messageInterface.messageInterface.doInit();
+                                }
+                                if (messageInterface.messageInterface.sesionInternface) {
+                                    setSession(messageInterface.messageInterface.sesionInternface);
+                                    setListening(true); // Set listening to true on mouse down
                                 }
                             }
-
-                        }}>
-                        {listening?<Icon name="microphone" inverted/>:<Icon name="mute" inverted/>}
-                    </button>
-                    <button
-                        title={"downland the chat"}
-                        onMouseEnter={() => {
-                            onHover(3)
                         }}
-                        onMouseLeave={offHover}
-
-                        id="dowlandButton"
-                        style={{backgroundColor: `${hover !== 3 ? messageInterface.messageInterface.style.color : darkenColor(messageInterface.messageInterface.style.color, 20)}`}}
-                        onClick={() => {
-                            downlandChat.next(1);
-                        }}><Icon name="download" inverted/>
-                    </button>
-                    <button
-                        title={"reveal the chat"}
-                        onMouseEnter={() => {
-                            onHover(4)
+                        onMouseUp={() => {
+                            setListening(false); // Set listening to false on mouse up
                         }}
-                        onMouseLeave={offHover}
+                    >
+                    {listening ? <Icon name="microphone" inverted/> : <Icon name="mute" inverted/>}
+                </button>
+                <button
+                    title={"downland the chat"}
+                    onMouseEnter={() => {
+                        onHover(3)
+                    }}
+                    onMouseLeave={offHover}
+
+                    id="dowlandButton"
+                    style={{backgroundColor: `${hover !== 3 ? messageInterface.messageInterface.style.color : darkenColor(messageInterface.messageInterface.style.color, 20)}`}}
+                    onClick={() => {
+                        downlandChat.next(1);
+                    }}><Icon name="download" inverted/>
+                </button>
+                <button
+                    title={"reveal the chat"}
+                    onMouseEnter={() => {
+                        onHover(4)
+                    }}
+                    onMouseLeave={offHover}
 
                         id="hideButton"
                         style={{backgroundColor: `${hover !== 4 ? messageInterface.messageInterface.style.color : darkenColor(messageInterface.messageInterface.style.color, 20)}`}}

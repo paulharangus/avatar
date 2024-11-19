@@ -5,7 +5,7 @@ import {ButtonDissableSubject} from "../../components/mainPage/mainComponent";
 
 const heygen_API = {
     // apiKey: 'ODBlNjNhMWUwYTc1NGRkY2I4NmU0MDMzNTAyMWU5MTgtMTczMDQ2NDA2OQ==',
-    apiKey:  "N2U4OWM1NmZkZWNlNGIyOGFhNDhkMmJkM2JmYmMzNDgtMTcxMDIzMzE5Nw==",
+    apiKey:  "N2U1ZWYyMjA5ZTMzNDFmMTk2N2Q5ZjI2MDU0YThlYTctMTczMDcxODgzNw==",
     serverUrl: 'https://api.heygen.com',
 };
 
@@ -22,7 +22,8 @@ export interface Voice {
 
 export const messageVoiceSubject = new Subject<Voice>();
 export const messageTextSubject = new Subject<string>();
-export const questionSubject = new Subject<string>()
+export const questionSubject = new Subject<string>();
+export const taskManager = new Subject<string>();
 
 
 export interface SessionInterface {
@@ -122,6 +123,22 @@ async function newSession(quality: any, avatar_name: any, voice_id: any, session
     }
 }
 
+export async function interupTask(sessionId:string){
+    const options = {
+        method: 'POST',
+        headers: {
+            accept: 'application/json',
+            'content-type': 'application/json',
+            'x-api-key': apiKey
+        },
+        body: JSON.stringify({session_id: sessionId})
+    };
+
+    fetch('https://api.heygen.com/v1/streaming.interrupt', options)
+        .then(res => res.json())
+        .then(res => console.log(res))
+        .catch(err => console.error(err));
+}
 
 export async function startAndDisplaySession(sessionInterface: SessionInterface) {
 
@@ -224,13 +241,14 @@ export async function talkHandler(sessionInterface: SessionInterface, task: Task
         if (text) {
             // Send the AI's response to Heygen's streaming.task API
             repeat(sessionInterface.sessionInfo.session_id, text, sessionInterface);
+            taskManager.next(text)
             messageTextSubject.next(text);
             questionSubject.next(task.taskInput)
             sessionInterface.updateStatus('LLM response sent successfully');
         } else {
             sessionInterface.updateStatus('Failed to get a response from AI');
         }
-        if(prompt === "Respond with and only with `You did not say anything so I will stop your microphone!`")
+        if(prompt === "Respond with and only with `Mi dispiace, ma non dispongo delle informazioni da Lei richieste!`")
             return ""
         return text;
     } catch (error) {
