@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    .responsive-iframe-container {
+        position: relative;
+        width: 100%; /* Full width */
+        padding-top: 56.25%; /* Aspect ratio (9/16 = 0.5625) */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .responsive-iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%; /* Full width */
+        height: 50%; /* Full height */
+    }
+</style>
+<script>
+    function resizeIframe(iframe) {
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<div class="responsive-iframe-container">
+    <iframe src="https://app2-dot-tr-avatar-newui-ro.ew.r.appspot.com/" onload="resizeIframe(this)" frameborder="0"></iframe>
+</div>
+</body>
+</html>
