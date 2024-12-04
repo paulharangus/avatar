@@ -234,7 +234,7 @@ const MessageComponent = (messageInterface: any) => {
                         //     setListening(true)
                         // }, time * 1000);
                         setListening(false)
-                    })
+                    }).catch(()=>{setDissable(false)})
                 }
             }
         }catch {

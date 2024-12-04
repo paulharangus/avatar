@@ -430,7 +430,7 @@ export const analyzeMedia = async (form: FormData, session: SessionInterface) =>
 
     if (data.text === "") {
         // closeMicrophone.next(true);
-        return talkHandler(session, {taskInput: "Respond with and only with `You did not say anything so I will stop your microphone!`"})
+        return talkHandler(session, {taskInput: "Respond with and only with `Non ho sentito nulla, prova a controllare il microfono!`"})
     }
 
     const talk = talkHandler(session, {taskInput: data.text})
